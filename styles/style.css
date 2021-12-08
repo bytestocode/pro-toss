@@ -4,6 +4,8 @@
 :root {
   --color-black: #333333;
   --color-gray: #777777;
+  --color-main: #9e1030;
+  --color-sub: #e9877e;
 }
 
 body {
@@ -32,33 +34,46 @@ h1 > span {
   padding: 32px;
 }
 
-.img--popup img {
+.popup {
   width: 50%;
 }
 
-.img--opacity img,
-.img--width img {
+.popup,
+.text-title,
+.text-content {
+  opacity: 0.1;
+  transform: translateY(200px);
+  transition: all 2s ease-out;
+}
+
+.opacity,
+.width {
   width: 100%;
 }
 
-.img--opacity img {
+.opacity {
   opacity: 0.1;
 }
 
-.img--width img {
+.width {
   width: 100vw;
   transform: translateX(-10%);
 }
 
-h2 {
+.text-title {
   margin: 20px 0;
-  font-size: 64px;
+  font-size: 48px;
   font-weight: bold;
-  color: var(--color-black);
+  color: var(--color-sub);
 }
 
-.text p {
+.text-content {
   padding-top: 20px;
-  font-size: 48px;
-  color: var(--color-gray);
+  font-size: 64px;
+  color: var(--color-main);
+}
+
+.img--popup:nth-child(3) .text-title,
+.img--popup:nth-child(3) .text-content {
+  text-align: right;
 }
